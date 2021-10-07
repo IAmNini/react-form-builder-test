@@ -61,4 +61,19 @@ form {
 
 .preview {
   background-color: #e69279;
+  overflow: scroll;
+}
+
+.preview-whole-question {
+  border: 1px solid black;
+  background-color: #FFEBE0;
+  margin: 20px -10px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.question-text {
+  font-weight: bold;
 }

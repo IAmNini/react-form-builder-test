@@ -9,8 +9,7 @@ export default function FormBuilder() {
   const [optionA, setOptionA] = useState('')
   const [optionB, setOptionB] = useState('')
   const [optionC, setOptionC] = useState('')
-
-  let userQuestions = []
+  const [userQuestions, setUserQuestions] = useState([])
 
   const handleQuestionChange = (event) => {
     setQuestion(event.target.value)
@@ -42,9 +41,9 @@ export default function FormBuilder() {
       optionB: { optionB },
       optionC: { optionC },
     }
-    userQuestions = [...userQuestions, userQuestion]
+    setUserQuestions(userQuestions => [...userQuestions, userQuestion])
     console.log(userQuestions)
-    console.log(userQuestions[0].question.question)
+    // console.log(userQuestions[0].question.question)
   }
 
   return (
@@ -84,19 +83,40 @@ export default function FormBuilder() {
               )}
             </div>
           </div>
-          <input type="submit" value="Save Question"/>
+          <input type="submit" value="Save Question" className="save-button" />
         </form>
         <div className="preview">
           {/* <Preview userQuestions={userQuestions}/> */}
           <h2>Preview:</h2>
-          <div>{userQuestions.map((userQuestion) => {
-            return (<div>{userQuestion.question.question}</div>)
-          })}
-          </div>
+              <div>{userQuestions.map((userQuestion) => {
+                return (
+                  <div className="preview-whole-question">
+                    <div><span className="underline">Question</span>: <span className="question-text">{userQuestion.question.question}</span></div>
+                    <div>{userQuestion.questionType.questionType === 'text' && (
+                      <textarea id="text-answer-preview" cols="37" rows="8"></textarea>
+                    )}</div>
+                    <div> {userQuestion.questionType.questionType === 'multiple' && (
+                      <div className="radio-buttons">
+                        <div className="radioA">
+                          <input type="radio" id="radio1" />
+                          <label for="radio1">A. {optionA} </label>
+                        </div>
+                        <div className="radioB">
+                          <input type="radio" id="radio2" />
+                          <label for="radio2">B. {optionB} </label>
+                        </div>
+                        <div className="radioC">
+                          <input type="radio" id="radio3" />
+                          <label for="radio3">C. {optionC} </label>
+                        </div>
+                      </div>
+                    )}</div>
+                  </div>
+                )
+              })}</div>
         </div>
       </div>
     </div>
   )
-
 
 }
