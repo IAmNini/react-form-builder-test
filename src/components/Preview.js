@@ -5,8 +5,7 @@ const Preview = (userQuestions) => {
   return (
     <div>
       <h1>Preview:</h1>
-      {/* <p>{userQuestions.question}</p> */}
-      <p>{userQuestions[0].question}</p>
+      <p>{userQuestions[0].question.question}</p>
     </div>
   )
 }
