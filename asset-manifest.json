@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-form-builder-test/static/css/main.345701b5.chunk.css",
+    "main.js": "/react-form-builder-test/static/js/main.eb89eac2.chunk.js",
+    "main.js.map": "/react-form-builder-test/static/js/main.eb89eac2.chunk.js.map",
+    "runtime-main.js": "/react-form-builder-test/static/js/runtime-main.0d48deab.js",
+    "runtime-main.js.map": "/react-form-builder-test/static/js/runtime-main.0d48deab.js.map",
+    "static/js/2.c250e6d7.chunk.js": "/react-form-builder-test/static/js/2.c250e6d7.chunk.js",
+    "static/js/2.c250e6d7.chunk.js.map": "/react-form-builder-test/static/js/2.c250e6d7.chunk.js.map",
+    "index.html": "/react-form-builder-test/index.html",
+    "static/css/main.345701b5.chunk.css.map": "/react-form-builder-test/static/css/main.345701b5.chunk.css.map",
+    "static/js/2.c250e6d7.chunk.js.LICENSE.txt": "/react-form-builder-test/static/js/2.c250e6d7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d48deab.js",
+    "static/js/2.c250e6d7.chunk.js",
+    "static/css/main.345701b5.chunk.css",
+    "static/js/main.eb89eac2.chunk.js"
+  ]
+}
